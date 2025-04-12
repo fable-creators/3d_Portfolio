@@ -32,7 +32,11 @@ const Home: NextPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         {/* Load Spline viewer for 3D rendering */}
-        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
+        <script
+          async
+          type="module"
+          src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"
+        />
       </Head>
 
       {/* Header section with logo and contact button */}
@@ -54,7 +58,7 @@ const Home: NextPage = () => {
         {/* Bio section with gradient text highlights */}
         <div className="bio-section">
           <p className="bio">
-            I'M A WEB DEVELOPER WITH A PASSION FOR CREATING <span className="gradient-text">BEAUTIFUL</span>
+            I&apos;M A WEB DEVELOPER WITH A PASSION FOR CREATING <span className="gradient-text">BEAUTIFUL</span>
             AND <span className="gradient-text">FUNCTIONAL</span> WEBSITES.
           </p>
         </div>
