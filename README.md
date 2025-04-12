@@ -1,24 +1,73 @@
-Welcome to the NextJS base template bootstrapped using the `create-next-app`. This template supports TypeScript, but you can use normal JavaScript as well.
+# Modern Portfolio Website
+
+A sleek and responsive portfolio website built with modern web technologies, featuring a 3D interactive element and smooth gradient animations.
+
+## Tech Stack
+
+- **Framework**: Next.js (React)
+- **Styling**: CSS3 with modern features
+  - Custom gradients
+  - CSS animations
+  - Responsive design
+  - Mobile-first approach
+- **3D Elements**: Spline (3D web graphics)
+- **Typography**: Custom gradient text effects
+- **Animations**: Custom scroll animations
+
+## Features
+
+- Responsive design that adapts to all screen sizes
+- Interactive 3D planet visualization
+- Gradient text animations
+- Smooth scrolling indicators
+- Mobile-optimized layout
+- Dynamic content scaling
+- Modern minimalist UI
 
 ## Getting Started
 
-Hit the run button to start the development server.
+1. Clone the repository
+```bash
+git clone [repository-url]
+```
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+2. Install dependencies
+```bash
+npm install
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on `/api/hello`. This endpoint can be edited in `pages/api/hello.ts`.
+3. Run the development server
+```bash
+npm run dev
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+- `pages/` - Next.js pages and routing
+- `styles/` - Global CSS and styling modules
+- `public/` - Static assets
+- `components/` - React components
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Responsive Design
 
-## Productionizing your Next App
+The website is fully responsive with breakpoints at:
+- Desktop (1400px+)
+- Tablet (768px - 1399px)
+- Mobile (480px - 767px)
+- Small Mobile (< 480px)
 
-To make your next App run smoothly in production make sure to deploy your project with [Repl Deployments](https://docs.replit.com/hosting/deployments/about-deployments)!
+## Browser Support
 
-You can also produce a production build by running `npm run build` and [changing the run command](https://docs.replit.com/programming-ide/configuring-repl#run) to `npm run start`.
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+
+## License
+
+MIT License - feel free to use this code for your own projects
+
+---
+Created with ❤️ using Next.js and modern web technologies

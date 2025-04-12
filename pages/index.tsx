@@ -1,44 +1,69 @@
-
+import React from 'react';
 import type { NextPage } from "next";
 import Head from "next/head";
-import { useTheme } from "../contexts/ThemeContext";
-import styles from "../styles/Home.module.css";
 
-const Home: NextPage = () => {
-  const { theme, toggleTheme } = useTheme();
-
+/**
+ * SplineViewer Component
+ * Renders a 3D scene using Spline's web viewer
+ * Implemented using dangerouslySetInnerHTML due to Web Component compatibility
+ */
+const SplineViewer = () => {
   return (
-    <div className={styles.container}>
+    <div
+      className="planet-3D"
+      dangerouslySetInnerHTML={{
+        __html: '<spline-viewer url="https://prod.spline.design/xhR0PRqNRK8y5CM9/scene.splinecode"></spline-viewer>'
+      }}
+    />
+  );
+};
+
+/**
+ * Home Page Component
+ * Main landing page featuring responsive design with interactive elements
+ * Includes gradient text animations and 3D visualization
+ */
+const Home: NextPage = () => {
+  return (
+    <div className="container">
       <Head>
         <title>My Website</title>
         <meta name="description" content="A mobile-friendly website" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        {/* Load Spline viewer for 3D rendering */}
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
       </Head>
 
-      <main className={styles.main}>
-        <button onClick={toggleTheme} className={styles.themeToggle}>
-          {theme === 'light' ? '🌙' : '☀️'}
-        </button>
-        
-        <h1 className={styles.title}>Welcome!</h1>
-        
-        <div className={styles.grid}>
-          <div className={styles.card}>
-            <h2>Feature One</h2>
-            <p>Description of the first feature goes here.</p>
-          </div>
-          
-          <div className={styles.card}>
-            <h2>Feature Two</h2>
-            <p>Description of the second feature goes here.</p>
-          </div>
-          
-          <div className={styles.card}>
-            <h2>Feature Three</h2>
-            <p>Description of the third feature goes here.</p>
+      {/* Header section with logo and contact button */}
+      <header>
+        <div className="logo">Ac3Cod3z</div>
+        <button className="contact-button">Contact</button>
+      </header>
+
+      <main>
+        {/* Hero section with responsive typography */}
+        <div className="title-section">
+          <h1>Web Developer</h1>
+          <h2>Web Dev</h2> {/* Mobile fallback */}
+          <div className="location">
+            <p>BASED<br />IN<br />USA</p>
           </div>
         </div>
+
+        {/* Bio section with gradient text highlights */}
+        <div className="bio-section">
+          <p className="bio">
+            I'M A WEB DEVELOPER WITH A PASSION FOR CREATING <span className="gradient-text">BEAUTIFUL</span>
+            AND <span className="gradient-text">FUNCTIONAL</span> WEBSITES.
+          </p>
+        </div>
+
+        {/* Scroll indicator animation */}
+        <div className="scroll-down" />
+
+        {/* 3D scene integration */}
+        <SplineViewer />
       </main>
     </div>
   );
